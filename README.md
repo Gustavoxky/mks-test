@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Documentação do Projeto MKS Frontend Challenge
 
-## Getting Started
+Este documento descreve a aplicação desenvolvida como parte do desafio frontend proposto pela MKS Desenvolvimento de Sistemas. A aplicação consiste em uma loja virtual que consome uma API REST de produtos para exibir uma lista de produtos e permite a interação com um carrinho de compras.
 
-First, run the development server:
+## Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A aplicação foi desenvolvida utilizando as seguintes tecnologias:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- TypeScript
+- React (com Next.js)
+- React-query
+- Scss
+- Framer-motion
+- Jest (para testes unitários)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A seguir, serão apresentadas as principais funcionalidades da aplicação, bem como informações sobre como executá-la localmente e sobre o deployment.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Funcionalidades
 
-## Learn More
+### Loja
 
-To learn more about Next.js, take a look at the following resources:
+- A lista de produtos é buscada da API REST fornecida pela MKS Desenvolvimento de Sistemas.
+- Durante o carregamento dos produtos, é exibido um efeito de shimmer/skeleton para melhorar a experiência do usuário.
+- Os produtos são exibidos em uma interface amigável, seguindo o design fornecido no Figma.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Carrinho
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- O carrinho permite adicionar produtos selecionados, exibindo-os com suas respectivas quantidades.
+- É possível aumentar a quantidade de cada produto selecionado diretamente no carrinho.
 
-## Deploy on Vercel
+### Testes Unitários
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Foram implementados testes unitários utilizando Jest e a biblioteca testing-library para garantir a qualidade do código.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Executando Localmente
+
+Para executar a aplicação localmente, siga os passos abaixo:
+
+1. Clone o repositório do projeto: git clone https://github.com/Gustavoxky/mks-test.git
+
+
+2. Acesse o diretório do projeto: cd mks-test
+
+
+3. Instale as dependências: npm install
+
+
+4. Inicie a aplicação: npm run dev
+
+5. Inicie os testes unitarios: npm test
+
+
+
+
+
