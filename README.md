@@ -36,19 +36,35 @@ A seguir, serão apresentadas as principais funcionalidades da aplicação, bem 
 
 Para executar a aplicação localmente, siga os passos abaixo:
 
-1. Clone o repositório do projeto: git clone https://github.com/Gustavoxky/mks-test.git
+1. Clone o repositório do projeto:
 
+```
+ git clone https://github.com/Gustavoxky/mks-test.git
+```
 
-2. Acesse o diretório do projeto: cd mks-test
+2. Acesse o diretório do projeto`
 
+```
+ cd mks-test
+```
 
-3. Instale as dependências: npm install
+3. Instale as dependências: 
 
+```
+npm install
+```
 
-4. Inicie a aplicação: npm run dev
+4. Inicie a aplicação:
 
-5. Inicie os testes unitarios: npm test
+```
+npm run dev
+```
 
+5. Inicie os testes unitarios: 
+
+```
+npm test
+```
 
 
 
