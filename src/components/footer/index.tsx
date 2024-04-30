@@ -1,10 +1,8 @@
-// Footer.tsx
-
 import React from 'react';
 import "./Footer.scss"
 
 interface FooterProps {
-  copyrightText: string; // Optional prop for copyright text
+  copyrightText: string;
 }
 
 const Footer: React.FC<FooterProps> = ({ copyrightText }) => {

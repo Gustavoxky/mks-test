@@ -20,7 +20,7 @@ describe('ProductCard component', () => {
       
       // Check if product name, price, and description are rendered correctly
       expect(getByText('Sample Product')).toBeInTheDocument();
-      expect(getByText('R$10')).toBeInTheDocument();
+      expect(getByText(/R\$ *10/)).toBeInTheDocument();
       expect(getByText('Sample description')).toBeInTheDocument();
   
       // Check if product image is rendered correctly

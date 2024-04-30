@@ -4,33 +4,40 @@ import { motion } from 'framer-motion';
 import { ProductCard } from '../productCard/ProductCard';
 import { useProductAPI } from '../../hooks/useProductAPI';
 import './ProductList.scss';
-import { CartItem } from '@/types/types'; // Importe o tipo CartItem aqui
+import { CartItem } from '@/types/types';
+import Empty from "../empty";
 
 interface ProductListProps {
-  addToCart: (product: CartItem) => void; // Defina o tipo de addToCart como uma função que recebe um CartItem e não retorna nada
+  addToCart: (product: CartItem) => void;
 }
 
-export const ProductList: React.FC<ProductListProps> = ({ addToCart }) => { // Defina ProductList como uma função componente que recebe ProductListProps
+export const ProductList: React.FC<ProductListProps> = ({ addToCart }) => {
   const { isLoading, data } = useQuery('products', useProductAPI);
+
+  if (isLoading) {
+    return (
+      <div className="product-list-container">
+        <h2 className="product-list-title">Products</h2>
+        <div className="product-list-items" data-testid="skeleton-items">
+          {[...Array(8)].map((_, index) => (
+            <div key={index} className="product-list-item skeleton-item" />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="product-list-container">
       <h2 className="product-list-title">Products</h2>
-      {isLoading && (
-        <div className="product-list-items">
-          {[...Array(6)].map((_, index) => (
-            <div key={index} className="product-list-item skeleton-item" />
-          ))}
-        </div>
-      )}
-      {!isLoading && (
+      {data && data.length > 0 ? (
         <motion.div
           className="product-list-items"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          {Array.isArray(data) && data.map((product) => (
+          {data.map((product) => (
             <motion.div
               key={product.id}
               className="product-list-item"
@@ -41,6 +48,8 @@ export const ProductList: React.FC<ProductListProps> = ({ addToCart }) => { // D
             </motion.div>
           ))}
         </motion.div>
+      ) : (
+        <Empty message="No products available" />
       )}
     </div>
   );

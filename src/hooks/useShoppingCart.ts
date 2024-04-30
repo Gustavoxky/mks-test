@@ -1,5 +1,3 @@
-// hooks/useShoppingCart.ts
-
 import { useState } from 'react';
 import { CartItem } from '../types/types';
 
