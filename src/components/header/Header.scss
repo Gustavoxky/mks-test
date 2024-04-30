@@ -1,0 +1,50 @@
+/* components/Header.module.scss */
+
+.header {
+    background-color: #333;
+    color: #fff;
+    height: 100px;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0F52BA;
+  }
+
+  .logo span {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .logo p:first-child {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .logo p {
+    font-size: 20px;
+    color: #fff;
+    margin-left: 8px;
+  }
+  
+  // .nav ul {
+  //   list-style-type: none;
+  //   padding: 0;
+  //   margin: 0;
+  // }
+  
+  // .nav ul li {
+  //   display: inline-block;
+  //   margin-left: 20px;
+  // }
+  
+  // .nav ul li a {
+  //   color: #fff;
+  //   text-decoration: none;
+  // }
+  
+  // .nav ul li a:hover {
+  //   text-decoration: underline;
+  // }
+  
