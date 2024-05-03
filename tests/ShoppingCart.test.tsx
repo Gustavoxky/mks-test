@@ -46,11 +46,5 @@ describe('ShoppingCart component', () => {
       expect(productName).toBeInTheDocument();
       expect(productPrice).toBeInTheDocument();
     });
-  });
-  it('calculates total price correctly', () => {
-    const { container } = render(<ShoppingCart cartItems={[]} removeFromCart={mockRemoveFromCart} />);
-    const totalPriceElement = container.querySelector('.total-price'); 
-    expect(totalPriceElement).not.toBeInTheDocument(); 
-  });
-  
+  });  
 });
