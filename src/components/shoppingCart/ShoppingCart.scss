@@ -21,17 +21,19 @@
     background: #0F52BA;
   }
 
-  .shopping-cart h3 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    color: #fff
+  .cart-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    color: #fff;
   }
 
   .product-item {
     display: flex;
     position: relative;
-    width: 385px;
+    max-width: 385px;
     padding: 20px;
     padding-right: 40px;
     border-radius: 8px;
@@ -61,12 +63,13 @@
     right: 30px;
     top: 30px;
     z-index: 200;
+    cursor: pointer;
   }
 
   .total-price {
     display: flex;
-    position: absolute;
-    bottom: 100px;
+    position: relative;
+    bottom: 10px;
     padding: 24px;
     justify-content: space-between;
     width: 90%;
@@ -81,10 +84,10 @@
   .btn {
     display: flex;
     align-items: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     justify-content: center;
-    width: 486px;
+    width: 100%;
     height: 100px;
     background-color: #000;
     color: #fff;
@@ -93,7 +96,8 @@
   .btn p {
     font-size: 28px;
     font-weight: 700;
-    color: #fff
+    color: #fff;
+    cursor: pointer;
   }
 
   .button-remove {
@@ -134,5 +138,15 @@
 
   .cart-header {
     color: #fff
+  }
+}
+
+@media (max-width: 568px) {
+  .shopping-cart-container {
+    width: 350px;
+  }
+
+  .product-item {
+    width: 280px
   }
 }

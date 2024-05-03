@@ -59,7 +59,9 @@ export const ShoppingCart: React.FC<Props> = ({ onClose, cartItems, removeFromCa
           {onClose && <button className="close-btn" onClick={onClose}>X</button>}
         </div>
         {cartItems.length === 0 ? (
-          <h3>O carrinho está vazio.</h3>
+          <span className='cart-empty'>
+             <h3>O carrinho está vazio.</h3>
+          </span>    
         ) : (
           <>
             {cartItems.map((cartItem) => (
@@ -77,13 +79,13 @@ export const ShoppingCart: React.FC<Props> = ({ onClose, cartItems, removeFromCa
                 <button className='button-remove' onClick={() => removeFromCart(cartItem.id)}>X</button>
               </div>
             ))}
-            <div className="total-price">
-              <p>Total:</p>
-              <p>R${totalPrice.toFixed(0)}</p>
-            </div>
           </>
         )}
       </motion.div>
+      <div className="total-price">
+        <p>Total:</p>
+        <p>R${totalPrice.toFixed(0)}</p>
+      </div>
       <motion.div className='btn'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
